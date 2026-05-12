@@ -1,6 +1,8 @@
+<?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Song;
 class Genre extends Model {
     protected $fillable = ['name'];
 

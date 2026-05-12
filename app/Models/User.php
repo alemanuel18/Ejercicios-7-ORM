@@ -1,6 +1,12 @@
+
+<?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Profile;
+use App\Models\Playlist;
+use App\Models\Subscription;
+use App\Models\Listen;
 class User extends Model {
     protected $fillable = ['name', 'email', 'password'];
     protected $hidden = ['password']; // Seguridad

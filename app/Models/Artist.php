@@ -1,6 +1,9 @@
+<?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Album;
+use App\Models\Song;
 class Artist extends Model {
     protected $fillable = ['name', 'country'];
 

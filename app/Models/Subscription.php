@@ -1,6 +1,8 @@
+<?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
 class Subscription extends Model {
     protected $fillable = ['user_id', 'plan', 'expires_at'];
     protected $casts = ['expires_at' => 'date'];

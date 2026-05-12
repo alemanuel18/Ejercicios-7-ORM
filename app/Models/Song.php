@@ -1,6 +1,10 @@
+<?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Album;
+use App\Models\Genre;
+use App\Models\Playlist;
 class Song extends Model {
     protected $fillable = ['title', 'duration_seconds', 'album_id', 'genre_id'];
     protected $casts = ['duration_seconds' => 'integer'];
