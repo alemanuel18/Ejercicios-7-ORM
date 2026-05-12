@@ -1,0 +1,6 @@
+class Subscription extends Model {
+    protected $fillable = ['user_id', 'plan', 'expires_at'];
+    protected $casts = ['expires_at' => 'date'];
+
+    public function user() { return $this->belongsTo(User::class); }
+}
