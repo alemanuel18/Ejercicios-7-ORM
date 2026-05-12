@@ -18,6 +18,7 @@ Sigue estos pasos en orden para levantar el entorno desde cero:
 Copia el archivo de ejemplo de variables de entorno:
 ```
 cp .env.example .env
+cp docker-compose.yml.example docker-compose.yml
 ```
 ### 2. Levantar Contenedores
 
