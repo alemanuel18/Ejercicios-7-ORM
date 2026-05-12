@@ -1,3 +1,6 @@
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Listen extends Model {
     protected $fillable = ['user_id', 'song_id', 'listened_at'];
     protected $casts = ['listened_at' => 'datetime'];

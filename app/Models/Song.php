@@ -1,3 +1,6 @@
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Song extends Model {
     protected $fillable = ['title', 'duration_seconds', 'album_id', 'genre_id'];
     protected $casts = ['duration_seconds' => 'integer'];

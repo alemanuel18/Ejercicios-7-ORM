@@ -1,3 +1,11 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models.*;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder {
 public function run(): void
 {
     // 1. Crear Géneros base
@@ -42,4 +50,5 @@ public function run(): void
             'listened_at' => now()->subDays(rand(1, 30))
         ]);
     }
+}
 }

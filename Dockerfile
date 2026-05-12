@@ -12,13 +12,13 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     locales \
     zip \
-    jpegoptim optipng pngquant gifsicle \
-    vim \
+    libzip-dev \
     unzip \
     git \
     curl \
-    libzip-dev \
-    libpq-dev
+    libpq-dev \
+    libonig-dev \
+    vim
 
 # Limpiar caché
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*

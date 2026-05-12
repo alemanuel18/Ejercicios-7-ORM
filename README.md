@@ -36,7 +36,7 @@ docker-compose exec app composer install
 Genera la clave de la aplicación y prepara la base de datos:
 ```
 docker-compose exec app php artisan key:generate
-docker-compose exec app migrate:fresh --seed
+docker compose exec app php artisan migrate:fresh --seed
 ```
 
     Nota: El comando --seed poblará la base de datos con más de 10,000 registros coherentes (Artistas, Álbumes, Canciones, Usuarios, etc.).
