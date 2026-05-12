@@ -23,19 +23,19 @@ cp .env.example .env
 
 Construye la imagen de la aplicación e inicia los servicios de PHP y PostgreSQL:
 ```
-docker-compose up -d --build
+docker compose up -d --build
 ```
 ### 3. Instalar Dependencias (Composer)
 
 Instala las librerías necesarias de Laravel dentro del contenedor:
 ```
-docker-compose exec app composer install
+docker compose exec app composer install
 ```
 ### 4. Configuración Final de Laravel
 
 Genera la clave de la aplicación y prepara la base de datos:
 ```
-docker-compose exec app php artisan key:generate
+docker compose exec app php artisan key:generate
 docker compose exec app php artisan migrate:fresh --seed
 ```
 
