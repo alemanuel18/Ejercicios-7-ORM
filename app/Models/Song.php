@@ -6,6 +6,7 @@ use App\Models\Album;
 use App\Models\Genre;
 use App\Models\Playlist;
 class Song extends Model {
+    use HasFactory;
     protected $fillable = ['title', 'duration_seconds', 'album_id', 'genre_id'];
     protected $casts = ['duration_seconds' => 'integer'];
 

@@ -4,6 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Song;
 class Genre extends Model {
+    use HasFactory;
     protected $fillable = ['name'];
 
     public function songs() { return $this->hasMany(Song::class); }

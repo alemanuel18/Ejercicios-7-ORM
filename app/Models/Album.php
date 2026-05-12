@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Artist;
 use App\Models\Song;
 class Album extends Model {
+    use HasFactory;
     protected $fillable = ['title', 'release_year', 'artist_id'];
     protected $casts = ['release_year' => 'integer'];
 

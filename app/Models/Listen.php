@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\User;
 use App\Models\Song;
 class Listen extends Model {
+    use HasFactory;
     protected $fillable = ['user_id', 'song_id', 'listened_at'];
     protected $casts = ['listened_at' => 'datetime'];
 

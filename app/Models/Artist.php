@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Album;
 use App\Models\Song;
 class Artist extends Model {
+    use HasFactory;
     protected $fillable = ['name', 'country'];
 
     public function albums() { return $this->hasMany(Album::class); }

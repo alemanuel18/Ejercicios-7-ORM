@@ -7,6 +7,7 @@ use App\Models\Playlist;
 use App\Models\Subscription;
 use App\Models\Listen;
 class User extends Model {
+    use HasFactory;
     protected $fillable = ['name', 'email', 'password'];
     protected $hidden = ['password']; // Seguridad
 
