@@ -69,7 +69,7 @@ El sistema consta de 10 tablas interconectadas:
 
 Para probar las consultas requeridas por el laboratorio, puedes usar Laravel Tinker, una consola interactiva:
 ```
-docker-compose exec app php artisan tinker
+docker compose exec app php artisan tinker
 ```
 Dentro de la consola, puedes copiar y pegar estos ejemplos:
 ### A. Eager Loading (Solución al problema N+1)
