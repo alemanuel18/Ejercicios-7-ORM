@@ -1,0 +1,10 @@
+public function up(): void {
+    Schema::create('listens', function (Blueprint $table) {
+        $table->id();
+        $table->foreignId('user_id')->constrained()->onDelete('cascade');
+        $table->foreignId('song_id')->constrained()->onDelete('cascade');
+        $table->timestamp('listened_at')->useCurrent();
+        $table->timestamps();
+    });
+}
+public function down(): void { Schema::dropIfExists('listens'); }
