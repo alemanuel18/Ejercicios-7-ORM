@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
 public function up(): void {
-    Schema::create('playlist_song', function (Blueprint $table) {
+    Schema::create('playlist-song', function (Blueprint $table) {
         $table->id();
         $table->foreignId('playlist_id')->constrained()->onDelete('cascade');
         $table->foreignId('song_id')->constrained()->onDelete('cascade');
         $table->timestamps();
     });
 }
-public function down(): void { Schema::dropIfExists('playlist_song'); }
+public function down(): void { Schema::dropIfExists('playlist-song'); }
 };

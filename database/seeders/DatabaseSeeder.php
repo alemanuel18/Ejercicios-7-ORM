@@ -56,5 +56,22 @@ class DatabaseSeeder extends Seeder {
                 'listened_at' => now()->subDays(rand(1, 30))
             ]);
         }
+
+        // 5. Crear Playlists y asignarles canciones
+$allSongs = Song::all();
+
+User::all()->take(20)->each(function ($user) use ($allSongs) {
+    // Crear 2 playlists por cada uno de estos 20 usuarios
+    $user->playlists()->createMany([
+        ['name' => 'Mis favoritas de UVG', 'is_public' => true],
+        ['name' => 'Para estudiar', 'is_public' => false],
+    ])->each(function ($playlist) use ($allSongs) {
+        // Asignar entre 5 y 10 canciones aleatorias a cada playlist
+        $playlist->songs()->attach(
+            $allSongs->random(rand(5, 10))->pluck('id')
+        );
+    });
+});
+
     }
 }

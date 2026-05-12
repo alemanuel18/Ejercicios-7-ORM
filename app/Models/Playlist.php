@@ -10,5 +10,5 @@ class Playlist extends Model {
     protected $casts = ['is_public' => 'boolean'];
 
     public function user() { return $this->belongsTo(User::class); }
-    public function songs() { return $this->belongsToMany(Song::class); }
+    public function songs() { return $this->belongsToMany(Song::class, 'playlist-song'); }
 }
